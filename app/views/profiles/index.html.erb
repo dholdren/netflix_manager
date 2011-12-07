@@ -1,0 +1,14 @@
+<div class="row">
+<% @queues.each do |queue| %>
+  <div class="six columns">
+    <h2><%= queue.name %></h2>
+    <ul class="queue queueConnect" id="queue_<%= queue.id %>" etag="<%=queue.etag%>">
+    <% queue.discs.each do |disc| %>
+      <li class="ui-state-default queue_item" id="queue_item_<%= disc.id %>">
+        <%= disc.title %>
+      </li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+</div>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NetflixManager</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <!-- %= #stylesheet_link_tag "foundation" % -->
+  <!-- %= #javascript_include_tag "foundation" % -->
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container" id="header">
+  <div class="row">
+    <div class="six columns">
+      <h1>NetflixManager <%= "- #{@title}" if @title %></h1>
+    </div>
+    <div class="six columns">
+      <div id="user_nav" class="right">
+        <% if user_signed_in? %>
+          <%= current_user.email %>
+          <%= link_to "Sign Out", destroy_user_session_path, {:method => 'delete'} %>
+        <% else %>
+          <%= link_to "Sign Up", new_user_registration_path %>&nbsp;/&nbsp;<%= link_to "Sign In", new_user_session_path %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="main">
+  <div class="row" >
+    <div class="four columns" ></div>
+    <div class="eight columns"
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
+  </div>
+  <%= yield %>
+</div>
+
+<div class="container" id="footer">
+</div>
+</body>
+</html>

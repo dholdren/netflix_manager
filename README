@@ -1,0 +1,5 @@
+
+requires the following environment variables:
+
+NETFLIX_OAUTH_DEVELOPER_KEY
+NETFLIX_OAUTH_DEVELOPER_SECRET
