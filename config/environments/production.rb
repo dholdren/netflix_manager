@@ -59,6 +59,6 @@ NetflixManager::Application.configure do
   config.active_support.deprecation = :notify
   
   #devise
-  config.action_mailer.default_url_options = { :host => 'netflixmanager.herokuapps.com' }
+  config.action_mailer.default_url_options = { :host => 'netflixmanager.herokuapp.com' }
 
 end
