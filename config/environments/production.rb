@@ -59,7 +59,6 @@ NetflixManager::Application.configure do
   config.active_support.deprecation = :notify
   
   #devise
-  raise "MUST SPECIFY HOST FOR DEVISE CONFIGURATION IN production.rb"
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { :host => 'netflixmanager.herokuapps.com' }
 
 end

@@ -4,6 +4,7 @@ module NetflixOauth
   class << self
     attr_accessor :developer_key
     attr_accessor :developer_secret
+    attr_accessor :app_name
     
     def consumer
       OAuth::Consumer.new(

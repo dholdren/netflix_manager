@@ -41,12 +41,13 @@ class NetflixAuthController < ApplicationController
   end
   
   def link_account 
-    oauth_callback = 'http://127.0.0.1:3000/netflix_auth/link_account_callback'
+    #oauth_callback = 'http://127.0.0.1:3000/netflix_auth/link_account_callback'
+    oauth_callback_url = netflix_auth_link_account_callback_url
     request_token = NetflixOauth.consumer().get_request_token(:oauth_callback => 
-      oauth_callback, :application_name => OAUTH_APP_NAME) 
+      oauth_callback_url, :application_name => NetflixOauth.app_name) 
     session[:netflix_request_token] = request_token 
     url = request_token.authorize_url(:oauth_consumer_key => 
-      OAUTH_DEVELOPER_KEY) 
+      NetflixOauth.developer_key) 
     redirect_to url 
   end
   
