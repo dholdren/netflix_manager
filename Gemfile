@@ -26,11 +26,16 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :test do
-  # Pretty printed test output
-  gem 'turn', :require => false
+#  # Pretty printed test output
+#  gem 'turn', :require => false
+   gem 'mocha'
+   gem 'vcr'
+   #gem 'webmock'
+   gem 'fakeweb'
 end
 
+gem 'netflix'
 gem 'oauth'
 #gem 'rest-client'
-gem 'devise'
+gem 'devise', '~> 1.5.3'
 gem 'zurb-foundation'

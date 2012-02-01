@@ -1,7 +1,9 @@
-<div class="row">
-<% @queues.each do |queue| %>
-  <div class="six columns">
-    <h2><%= queue.name %></h2>
+<div id="profiles" class="row" >
+<% @profiles.each do |profile|
+	 queue = profile.disc_queue %>
+<!--% @queues.each do |queue| % -->
+  <%= div_for profile, {:class=>"three columns"} do %>
+    <h2><%= profile.name %></h2>
     <ul class="queue queueConnect" id="queue_<%= queue.id %>" etag="<%=queue.etag%>">
     <% queue.discs.each do |disc| %>
       <li class="ui-state-default queue_item" id="queue_item_<%= disc.id %>">
@@ -9,6 +11,11 @@
       </li>
     <% end %>
     </ul>
+  <% end %>
+<% end %>
+<% unless @profiles.length >= 4 %>
+  <div class="three columns">
+    <%= button_to "Add profile", netflix_auth_link_account_path, {:class => "nice small radius blue button"} %>
   </div>
 <% end %>
 </div>

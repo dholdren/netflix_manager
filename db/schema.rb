@@ -11,14 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111203134838) do
-
-  create_table "movie_queues", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(:version => 20111209150405) do
 
   create_table "profiles", :force => true do |t|
+    t.string   "netflix_user_id"
+    t.string   "name"
+    t.boolean  "primary"
+    t.integer  "position"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

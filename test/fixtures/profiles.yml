@@ -1,11 +1,26 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-# This model initially had no columns defined.  If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+one_main:
+# should come from JSON response
+#  name: Jane Smith
+  primary: true
+  position: 1
+  netflix_user_id: nuid_one
+  user: one
+
+one_sub2:
+# should come from JSON response
+#  name: Jim Smith
+  primary: false
+  position: 3
+  netflix_user_id: nuid_sub2
+  user: one
+
+one_sub1:
+# should come from JSON response
+#  name: John Smith
+  primary: false
+  position: 2
+  netflix_user_id: nuid_sub1
+  user: one
+

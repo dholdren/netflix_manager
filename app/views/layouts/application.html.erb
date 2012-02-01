@@ -29,16 +29,30 @@
 
 <div class="container" id="main">
   <div class="row" >
-    <div class="four columns" ></div>
-    <div class="eight columns"
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+    <div class="four columns">
+      <% if notice %>
+      <div class="alert-box success">
+        <%= notice %>
+        <a href="" class="close">&times;</a>
+      </div>
+      <% end %>
+      <% if alert %>
+      <div class="alert-box error">
+        <%= alert %>
+        <a href="" class="close">&times;</a>
+      </div>
+      <% end %>
     </div>
   </div>
   <%= yield %>
 </div>
 
 <div class="container" id="footer">
+  <div class="row">
+    <div class="4 columns">
+      This site created by <a href="mailto:deanholdren[at]gmail.com">Dean Holdren</a>
+    </div>
+  </div>
 </div>
 </body>
 </html>
