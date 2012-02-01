@@ -65,7 +65,7 @@ GEM
     mocha (0.10.3)
       metaclass (~> 0.0.1)
     multi_json (1.0.4)
-    netflix (0.2.0)
+    netflix (0.2.1)
       json
       launchy
       oauth
