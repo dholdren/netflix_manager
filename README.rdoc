@@ -4,7 +4,7 @@ Provides missing functionality to Netflix accounts with multiple profiles:
 Lets you move movies between disc queues of different profiles (in the same account)
 
 Uses the following:
-* Netflix REST API
+* Netflix REST API (via my netflix gem [http://github.com/dholdren/netflix-ruby])
 * OAuth for access to Netflix
 * Devise
 * {Zurb Foundation}[http://foundation.zurb.com]
